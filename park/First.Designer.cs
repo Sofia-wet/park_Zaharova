@@ -78,6 +78,7 @@
             this.AutharizationButton.TabIndex = 4;
             this.AutharizationButton.Text = "Вход";
             this.AutharizationButton.UseVisualStyleBackColor = true;
+            this.AutharizationButton.Click += new System.EventHandler(this.AutharizationButton_Click);
             // 
             // ClientCheckBox
             // 
@@ -100,7 +101,7 @@
             this.VisibleCheckBox.UseVisualStyleBackColor = true;
             this.VisibleCheckBox.CheckedChanged += new System.EventHandler(this.VisibleCheckBox_CheckedChanged);
             // 
-            // Form1
+            // First
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -112,7 +113,8 @@
             this.Controls.Add(this.LoginTextBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.Name = "First";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Парк Горького - Авторизация";
             this.ResumeLayout(false);
             this.PerformLayout();

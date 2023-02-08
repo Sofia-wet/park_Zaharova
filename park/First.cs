@@ -28,5 +28,11 @@ namespace park
                 PasswordTextBox.PasswordChar = '*';
             }
         }
+
+        private void AutharizationButton_Click(object sender, EventArgs e)
+        {
+            Second second = new Second();
+            second.Show();
+        }
     }
 }
