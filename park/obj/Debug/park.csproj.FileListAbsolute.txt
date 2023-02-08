@@ -1,0 +1,11 @@
+D:\vs_project\park_test\park\bin\Debug\park.exe.config
+D:\vs_project\park_test\park\bin\Debug\park.exe
+D:\vs_project\park_test\park\bin\Debug\park.pdb
+D:\vs_project\park_test\park\obj\Debug\park.csproj.AssemblyReference.cache
+D:\vs_project\park_test\park\obj\Debug\park.csproj.SuggestedBindingRedirects.cache
+D:\vs_project\park_test\park\obj\Debug\park.Form1.resources
+D:\vs_project\park_test\park\obj\Debug\park.Properties.Resources.resources
+D:\vs_project\park_test\park\obj\Debug\park.csproj.GenerateResource.cache
+D:\vs_project\park_test\park\obj\Debug\park.csproj.CoreCompileInputs.cache
+D:\vs_project\park_test\park\obj\Debug\park.exe
+D:\vs_project\park_test\park\obj\Debug\park.pdb
