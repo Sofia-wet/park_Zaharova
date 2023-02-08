@@ -1,6 +1,6 @@
 ﻿namespace park
 {
-    partial class Form1
+    partial class First
     {
         /// <summary>
         /// Обязательная переменная конструктора.

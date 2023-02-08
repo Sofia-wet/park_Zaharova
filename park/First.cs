@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace park
 {
-    public partial class Form1 : Form
+    public partial class First : Form
     {
-        public Form1()
+        public First()
         {
             InitializeComponent();
         }
