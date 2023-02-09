@@ -15,7 +15,6 @@ namespace park
 {
     public partial class Second : Form
     {
-        String test;
         public Second()
         {
             InitializeComponent();
@@ -33,10 +32,38 @@ namespace park
             order.Show();
         }
         SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["parkConnectionString"].ConnectionString);
+        SqlDataAdapter adapter = new SqlDataAdapter();
+        DataTable table = new DataTable();
+        public DataRow[] row;
+        string role;
+
         private void Second_Load(object sender, EventArgs e)
         {
-            test = First.Login;
-
+            connection.Open();
+            if (value2 == 0)
+            {
+                SqlCommand sqlCommand = new SqlCommand($"select Fio_user, id_role from User$ where Id_user='{@value}'", connection);
+                adapter.SelectCommand = sqlCommand;
+                adapter.Fill(table);
+                row = table.Select();
+                FioLlabel.Text = "ФИО: " + row[0][0].ToString();
+                role = row[0][1].ToString();
+                sqlCommand = new SqlCommand($"selext Name_role from Role$ where Id_role='{@role}'", connection);
+                adapter.Fill(table);
+                row = table.Select();
+                RoleLabel.Text = "Роль: " + row[0][0].ToString();
+            }
+            else
+            {
+                SqlCommand sqlCommand = new SqlCommand($"select Fio_client, Code_client from Client$ where Code_client='{@value}'", connection);
+                adapter.SelectCommand = sqlCommand;
+                adapter.Fill(table);
+                row = table.Select();
+                FioLlabel.Text = "ФИО: " + row[0][0].ToString();
+                RoleLabel.Text = "Код: " + row[0][1].ToString();
+                ServiceButton.Enabled = false;
+                OrderButton.Enabled = false;
+            }
         }
     }
 }

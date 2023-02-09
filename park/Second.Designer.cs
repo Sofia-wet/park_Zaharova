@@ -46,7 +46,7 @@
             // RoleLabel
             // 
             this.RoleLabel.AutoSize = true;
-            this.RoleLabel.Location = new System.Drawing.Point(255, 222);
+            this.RoleLabel.Location = new System.Drawing.Point(260, 222);
             this.RoleLabel.Name = "RoleLabel";
             this.RoleLabel.Size = new System.Drawing.Size(42, 16);
             this.RoleLabel.TabIndex = 1;

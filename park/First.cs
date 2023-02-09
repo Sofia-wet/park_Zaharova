@@ -32,8 +32,11 @@ namespace park
                 PasswordTextBox.PasswordChar = '*';
             }
         }
-        static public string Login;
-        static public string Password;
+        public string Login;
+        public string Password;
+        public DataRow[] row;
+        static public string value;
+        static public int value2;
         SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["parkConnectionString"].ConnectionString);
 
         private void AutharizationButton_Click(object sender, EventArgs e)
@@ -46,16 +49,21 @@ namespace park
 
             if (ClientCheckBox.Checked)
             {
-                SqlCommand sqlCommand = new SqlCommand($"select Email, Password from Auth_client$ where Email='{@Login}' and Password='{Password}'", connection);
+                SqlCommand sqlCommand = new SqlCommand($"select Code_client, Email, Password from Auth_client$ where Email='{@Login}' and Password='{Password}'", connection);
                 adapter.SelectCommand = sqlCommand;
                 adapter.Fill(table);
-
+                row = table.Select();
+                value = row[0][0].ToString();
+                value2 = 1;
             }
             else
             {
-                SqlCommand sqlCommand = new SqlCommand($"select Login, Password from Auth_user$ where Login='{@Login}' and Password='{Password}'", connection);
+                SqlCommand sqlCommand = new SqlCommand($"select Id_user, Login, Password from Auth_user$ where Login='{@Login}' and Password='{Password}'", connection);
                 adapter.SelectCommand = sqlCommand;
                 adapter.Fill(table);
+                row = table.Select();
+                value = row[0][0].ToString();
+                value2 = 0;
 
             }
 
@@ -70,18 +78,6 @@ namespace park
                 MessageBox.Show("Пользователь не авторизован!", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             connection.Close();
-        }
-
-        private void First_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        
-
-        private void ClientCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            
         }
     }
 }
