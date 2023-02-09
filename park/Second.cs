@@ -28,5 +28,10 @@ namespace park
             Order order = new Order(); 
             order.Show();
         }
+
+        private void Second_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

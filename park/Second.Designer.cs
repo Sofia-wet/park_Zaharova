@@ -84,6 +84,7 @@
             this.Name = "Second";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Парк Горького - Пользователь";
+            this.Load += new System.EventHandler(this.Second_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -89,6 +89,7 @@
             this.ClientCheckBox.TabIndex = 5;
             this.ClientCheckBox.Text = "клиент";
             this.ClientCheckBox.UseVisualStyleBackColor = true;
+            this.ClientCheckBox.CheckedChanged += new System.EventHandler(this.ClientCheckBox_CheckedChanged);
             // 
             // VisibleCheckBox
             // 
@@ -116,6 +117,7 @@
             this.Name = "First";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Парк Горького - Авторизация";
+            this.Load += new System.EventHandler(this.First_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

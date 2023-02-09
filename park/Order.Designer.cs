@@ -30,23 +30,25 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.parkDataSet = new park.parkDataSet();
             this.orderBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.parkDataSet = new park.parkDataSet();
             this.order_TableAdapter = new park.parkDataSetTableAdapters.Order_TableAdapter();
             this.parkDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.idorderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iduserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codeorderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.startdateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.starttimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codeclientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idstatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.enddateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.parkDataSetBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.alltimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.enddateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idstatusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codeclientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.starttimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.startdateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codeorderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iduserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idorderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.parkDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.parkDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.parkDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.parkDataSetBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -75,15 +77,15 @@
             this.dataGridView1.Size = new System.Drawing.Size(997, 415);
             this.dataGridView1.TabIndex = 0;
             // 
-            // parkDataSet
-            // 
-            this.parkDataSet.DataSetName = "parkDataSet";
-            this.parkDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // orderBindingSource
             // 
             this.orderBindingSource.DataMember = "Order$";
             this.orderBindingSource.DataSource = this.parkDataSet;
+            // 
+            // parkDataSet
+            // 
+            this.parkDataSet.DataSetName = "parkDataSet";
+            this.parkDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // order_TableAdapter
             // 
@@ -94,68 +96,19 @@
             this.parkDataSetBindingSource.DataSource = this.parkDataSet;
             this.parkDataSetBindingSource.Position = 0;
             // 
-            // idorderDataGridViewTextBoxColumn
+            // parkDataSetBindingSource1
             // 
-            this.idorderDataGridViewTextBoxColumn.DataPropertyName = "Id_order";
-            this.idorderDataGridViewTextBoxColumn.HeaderText = "Id_order";
-            this.idorderDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idorderDataGridViewTextBoxColumn.Name = "idorderDataGridViewTextBoxColumn";
-            this.idorderDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idorderDataGridViewTextBoxColumn.Width = 86;
+            this.parkDataSetBindingSource1.DataSource = this.parkDataSet;
+            this.parkDataSetBindingSource1.Position = 0;
             // 
-            // iduserDataGridViewTextBoxColumn
+            // alltimeDataGridViewTextBoxColumn
             // 
-            this.iduserDataGridViewTextBoxColumn.DataPropertyName = "Id_user";
-            this.iduserDataGridViewTextBoxColumn.HeaderText = "Id_user";
-            this.iduserDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.iduserDataGridViewTextBoxColumn.Name = "iduserDataGridViewTextBoxColumn";
-            this.iduserDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iduserDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // codeorderDataGridViewTextBoxColumn
-            // 
-            this.codeorderDataGridViewTextBoxColumn.DataPropertyName = "Code_order";
-            this.codeorderDataGridViewTextBoxColumn.HeaderText = "Code_order";
-            this.codeorderDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.codeorderDataGridViewTextBoxColumn.Name = "codeorderDataGridViewTextBoxColumn";
-            this.codeorderDataGridViewTextBoxColumn.ReadOnly = true;
-            this.codeorderDataGridViewTextBoxColumn.Width = 108;
-            // 
-            // startdateDataGridViewTextBoxColumn
-            // 
-            this.startdateDataGridViewTextBoxColumn.DataPropertyName = "Start_date";
-            this.startdateDataGridViewTextBoxColumn.HeaderText = "Start_date";
-            this.startdateDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.startdateDataGridViewTextBoxColumn.Name = "startdateDataGridViewTextBoxColumn";
-            this.startdateDataGridViewTextBoxColumn.ReadOnly = true;
-            this.startdateDataGridViewTextBoxColumn.Width = 97;
-            // 
-            // starttimeDataGridViewTextBoxColumn
-            // 
-            this.starttimeDataGridViewTextBoxColumn.DataPropertyName = "Start_time";
-            this.starttimeDataGridViewTextBoxColumn.HeaderText = "Start_time";
-            this.starttimeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.starttimeDataGridViewTextBoxColumn.Name = "starttimeDataGridViewTextBoxColumn";
-            this.starttimeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.starttimeDataGridViewTextBoxColumn.Width = 95;
-            // 
-            // codeclientDataGridViewTextBoxColumn
-            // 
-            this.codeclientDataGridViewTextBoxColumn.DataPropertyName = "Code_client";
-            this.codeclientDataGridViewTextBoxColumn.HeaderText = "Code_client";
-            this.codeclientDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.codeclientDataGridViewTextBoxColumn.Name = "codeclientDataGridViewTextBoxColumn";
-            this.codeclientDataGridViewTextBoxColumn.ReadOnly = true;
-            this.codeclientDataGridViewTextBoxColumn.Width = 107;
-            // 
-            // idstatusDataGridViewTextBoxColumn
-            // 
-            this.idstatusDataGridViewTextBoxColumn.DataPropertyName = "Id_status";
-            this.idstatusDataGridViewTextBoxColumn.HeaderText = "Id_status";
-            this.idstatusDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idstatusDataGridViewTextBoxColumn.Name = "idstatusDataGridViewTextBoxColumn";
-            this.idstatusDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idstatusDataGridViewTextBoxColumn.Width = 89;
+            this.alltimeDataGridViewTextBoxColumn.DataPropertyName = "All_time";
+            this.alltimeDataGridViewTextBoxColumn.HeaderText = "All_time";
+            this.alltimeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.alltimeDataGridViewTextBoxColumn.Name = "alltimeDataGridViewTextBoxColumn";
+            this.alltimeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.alltimeDataGridViewTextBoxColumn.Width = 83;
             // 
             // enddateDataGridViewTextBoxColumn
             // 
@@ -166,14 +119,68 @@
             this.enddateDataGridViewTextBoxColumn.ReadOnly = true;
             this.enddateDataGridViewTextBoxColumn.Width = 94;
             // 
-            // alltimeDataGridViewTextBoxColumn
+            // idstatusDataGridViewTextBoxColumn
             // 
-            this.alltimeDataGridViewTextBoxColumn.DataPropertyName = "All_time";
-            this.alltimeDataGridViewTextBoxColumn.HeaderText = "All_time";
-            this.alltimeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.alltimeDataGridViewTextBoxColumn.Name = "alltimeDataGridViewTextBoxColumn";
-            this.alltimeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.alltimeDataGridViewTextBoxColumn.Width = 83;
+            this.idstatusDataGridViewTextBoxColumn.DataPropertyName = "Id_status";
+            this.idstatusDataGridViewTextBoxColumn.HeaderText = "Id_status";
+            this.idstatusDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idstatusDataGridViewTextBoxColumn.Name = "idstatusDataGridViewTextBoxColumn";
+            this.idstatusDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idstatusDataGridViewTextBoxColumn.Width = 89;
+            // 
+            // codeclientDataGridViewTextBoxColumn
+            // 
+            this.codeclientDataGridViewTextBoxColumn.DataPropertyName = "Code_client";
+            this.codeclientDataGridViewTextBoxColumn.HeaderText = "Code_client";
+            this.codeclientDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.codeclientDataGridViewTextBoxColumn.Name = "codeclientDataGridViewTextBoxColumn";
+            this.codeclientDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codeclientDataGridViewTextBoxColumn.Width = 107;
+            // 
+            // starttimeDataGridViewTextBoxColumn
+            // 
+            this.starttimeDataGridViewTextBoxColumn.DataPropertyName = "Start_time";
+            this.starttimeDataGridViewTextBoxColumn.HeaderText = "Start_time";
+            this.starttimeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.starttimeDataGridViewTextBoxColumn.Name = "starttimeDataGridViewTextBoxColumn";
+            this.starttimeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.starttimeDataGridViewTextBoxColumn.Width = 95;
+            // 
+            // startdateDataGridViewTextBoxColumn
+            // 
+            this.startdateDataGridViewTextBoxColumn.DataPropertyName = "Start_date";
+            this.startdateDataGridViewTextBoxColumn.HeaderText = "Start_date";
+            this.startdateDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.startdateDataGridViewTextBoxColumn.Name = "startdateDataGridViewTextBoxColumn";
+            this.startdateDataGridViewTextBoxColumn.ReadOnly = true;
+            this.startdateDataGridViewTextBoxColumn.Width = 97;
+            // 
+            // codeorderDataGridViewTextBoxColumn
+            // 
+            this.codeorderDataGridViewTextBoxColumn.DataPropertyName = "Code_order";
+            this.codeorderDataGridViewTextBoxColumn.HeaderText = "Code_order";
+            this.codeorderDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.codeorderDataGridViewTextBoxColumn.Name = "codeorderDataGridViewTextBoxColumn";
+            this.codeorderDataGridViewTextBoxColumn.ReadOnly = true;
+            this.codeorderDataGridViewTextBoxColumn.Width = 108;
+            // 
+            // iduserDataGridViewTextBoxColumn
+            // 
+            this.iduserDataGridViewTextBoxColumn.DataPropertyName = "Id_user";
+            this.iduserDataGridViewTextBoxColumn.HeaderText = "Id_user";
+            this.iduserDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.iduserDataGridViewTextBoxColumn.Name = "iduserDataGridViewTextBoxColumn";
+            this.iduserDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iduserDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // idorderDataGridViewTextBoxColumn
+            // 
+            this.idorderDataGridViewTextBoxColumn.DataPropertyName = "Id_order";
+            this.idorderDataGridViewTextBoxColumn.HeaderText = "Id_order";
+            this.idorderDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idorderDataGridViewTextBoxColumn.Name = "idorderDataGridViewTextBoxColumn";
+            this.idorderDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idorderDataGridViewTextBoxColumn.Width = 86;
             // 
             // Order
             // 
@@ -186,9 +193,10 @@
             this.Text = "Парк Горького - Заказы";
             this.Load += new System.EventHandler(this.Order_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.parkDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.orderBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.parkDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.parkDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.parkDataSetBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -199,6 +207,7 @@
         private parkDataSet parkDataSet;
         private System.Windows.Forms.BindingSource orderBindingSource;
         private parkDataSetTableAdapters.Order_TableAdapter order_TableAdapter;
+        private System.Windows.Forms.BindingSource parkDataSetBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn idorderDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn iduserDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn codeorderDataGridViewTextBoxColumn;
@@ -208,6 +217,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn idstatusDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn enddateDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn alltimeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource parkDataSetBindingSource;
+        private System.Windows.Forms.BindingSource parkDataSetBindingSource1;
     }
 }
