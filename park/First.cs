@@ -32,8 +32,8 @@ namespace park
                 PasswordTextBox.PasswordChar = '*';
             }
         }
-        public string Login;
-        public string Password;
+        static public string Login;
+        static public string Password;
         SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["parkConnectionString"].ConnectionString);
 
         private void AutharizationButton_Click(object sender, EventArgs e)
