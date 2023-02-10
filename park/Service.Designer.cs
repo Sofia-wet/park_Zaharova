@@ -39,6 +39,9 @@
             this.parkDataSet = new park.parkDataSet();
             this.service_TableAdapter = new park.parkDataSetTableAdapters.Service_TableAdapter();
             this.AddButton = new System.Windows.Forms.Button();
+            this.DelButton = new System.Windows.Forms.Button();
+            this.tableAdapterManager1 = new park.parkDataSetTableAdapters.TableAdapterManager();
+            this.RedButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.serviceBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.parkDataSet)).BeginInit();
@@ -134,11 +137,48 @@
             this.AddButton.UseVisualStyleBackColor = true;
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
+            // DelButton
+            // 
+            this.DelButton.Location = new System.Drawing.Point(853, 12);
+            this.DelButton.Name = "DelButton";
+            this.DelButton.Size = new System.Drawing.Size(116, 23);
+            this.DelButton.TabIndex = 2;
+            this.DelButton.Text = "Удалить";
+            this.DelButton.UseVisualStyleBackColor = true;
+            this.DelButton.Click += new System.EventHandler(this.DelButton_Click);
+            // 
+            // tableAdapterManager1
+            // 
+            this.tableAdapterManager1.Auth_client_TableAdapter = null;
+            this.tableAdapterManager1.Auth_user_TableAdapter = null;
+            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager1.Client_TableAdapter = null;
+            this.tableAdapterManager1.Content_TableAdapter = null;
+            this.tableAdapterManager1.Last_TableAdapter = null;
+            this.tableAdapterManager1.Order_TableAdapter = null;
+            this.tableAdapterManager1.Role_TableAdapter = null;
+            this.tableAdapterManager1.Service_TableAdapter = this.service_TableAdapter;
+            this.tableAdapterManager1.Status_TableAdapter = null;
+            this.tableAdapterManager1.UpdateOrder = park.parkDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager1.User_TableAdapter = null;
+            // 
+            // RedButton
+            // 
+            this.RedButton.Location = new System.Drawing.Point(791, 41);
+            this.RedButton.Name = "RedButton";
+            this.RedButton.Size = new System.Drawing.Size(134, 23);
+            this.RedButton.TabIndex = 3;
+            this.RedButton.Text = "Редактирование";
+            this.RedButton.UseVisualStyleBackColor = true;
+            this.RedButton.Click += new System.EventHandler(this.RedButton_Click);
+            // 
             // Service
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1046, 450);
+            this.Controls.Add(this.RedButton);
+            this.Controls.Add(this.DelButton);
             this.Controls.Add(this.AddButton);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Service";
@@ -164,5 +204,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn servicecodeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn costDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button AddButton;
+        private System.Windows.Forms.Button DelButton;
+        private parkDataSetTableAdapters.TableAdapterManager tableAdapterManager1;
+        private System.Windows.Forms.Button RedButton;
     }
 }

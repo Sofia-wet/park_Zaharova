@@ -338,7 +338,7 @@
             this.Controls.Add(this.service_BindingNavigator);
             this.Name = "Service_Red";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Парк Горького - Добавление";
+            this.Text = "Парк Горького - Услуги - Добавление";
             this.Load += new System.EventHandler(this.Service_Red_Load);
             ((System.ComponentModel.ISupportInitialize)(this.parkDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.service_BindingSource)).EndInit();
