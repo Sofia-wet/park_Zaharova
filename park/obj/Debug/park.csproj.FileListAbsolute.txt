@@ -21,3 +21,4 @@ D:\vs_project\park_test\park\bin\Debug\System.Security.AccessControl.xml
 D:\vs_project\park_test\park\bin\Debug\System.Security.Permissions.xml
 D:\vs_project\park_test\park\bin\Debug\System.Security.Principal.Windows.xml
 D:\vs_project\park_test\park\obj\Debug\park.csproj.CopyComplete
+D:\vs_project\park_test\park\obj\Debug\park.Service_Red.resources

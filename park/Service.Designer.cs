@@ -30,17 +30,18 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.parkDataSet = new park.parkDataSet();
-            this.serviceBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.service_TableAdapter = new park.parkDataSetTableAdapters.Service_TableAdapter();
             this.idserviceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nameserviceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.servicecodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.serviceBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.parkDataSet = new park.parkDataSet();
+            this.service_TableAdapter = new park.parkDataSetTableAdapters.Service_TableAdapter();
+            this.AddButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.parkDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.serviceBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.parkDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -63,20 +64,6 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(696, 344);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // parkDataSet
-            // 
-            this.parkDataSet.DataSetName = "parkDataSet";
-            this.parkDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // serviceBindingSource
-            // 
-            this.serviceBindingSource.DataMember = "Service$";
-            this.serviceBindingSource.DataSource = this.parkDataSet;
-            // 
-            // service_TableAdapter
-            // 
-            this.service_TableAdapter.ClearBeforeFill = true;
             // 
             // idserviceDataGridViewTextBoxColumn
             // 
@@ -123,19 +110,44 @@
             this.costDataGridViewTextBoxColumn.ReadOnly = true;
             this.costDataGridViewTextBoxColumn.Width = 125;
             // 
+            // serviceBindingSource
+            // 
+            this.serviceBindingSource.DataMember = "Service$";
+            this.serviceBindingSource.DataSource = this.parkDataSet;
+            // 
+            // parkDataSet
+            // 
+            this.parkDataSet.DataSetName = "parkDataSet";
+            this.parkDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // service_TableAdapter
+            // 
+            this.service_TableAdapter.ClearBeforeFill = true;
+            // 
+            // AddButton
+            // 
+            this.AddButton.Location = new System.Drawing.Point(731, 12);
+            this.AddButton.Name = "AddButton";
+            this.AddButton.Size = new System.Drawing.Size(116, 23);
+            this.AddButton.TabIndex = 1;
+            this.AddButton.Text = "Добавить";
+            this.AddButton.UseVisualStyleBackColor = true;
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
+            // 
             // Service
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(756, 450);
+            this.ClientSize = new System.Drawing.Size(1046, 450);
+            this.Controls.Add(this.AddButton);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Service";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Парк Горького - Услуги";
             this.Load += new System.EventHandler(this.Service_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.parkDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.serviceBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.parkDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -151,5 +163,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nameserviceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn servicecodeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn costDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button AddButton;
     }
 }

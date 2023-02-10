@@ -23,5 +23,12 @@ namespace park
             this.service_TableAdapter.Fill(this.parkDataSet._Service_);
 
         }
+
+        private void AddButton_Click(object sender, EventArgs e)
+        {
+            Service_Red s = new Service_Red();
+            s.Show();
+            this.Close();
+        }
     }
 }

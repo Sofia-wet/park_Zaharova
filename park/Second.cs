@@ -24,12 +24,14 @@ namespace park
         {
             Service service = new Service();
             service.Show();
+            this.Close();
         }
 
         private void OrderButton_Click(object sender, EventArgs e)
         {
             Order order = new Order(); 
             order.Show();
+            this.Close();
         }
         SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["parkConnectionString"].ConnectionString);
         SqlDataAdapter adapter = new SqlDataAdapter();
