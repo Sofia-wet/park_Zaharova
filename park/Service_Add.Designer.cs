@@ -1,6 +1,6 @@
 ﻿namespace park
 {
-    partial class Service_Red
+    partial class Service_Add
     {
         /// <summary>
         /// Required designer variable.
@@ -29,28 +29,28 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Service_Red));
             System.Windows.Forms.Label id_serviceLabel;
             System.Windows.Forms.Label idLabel;
             System.Windows.Forms.Label name_serviceLabel;
             System.Windows.Forms.Label service_codeLabel;
             System.Windows.Forms.Label costLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Service_Add));
             this.parkDataSet = new park.parkDataSet();
             this.service_BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.service_TableAdapter = new park.parkDataSetTableAdapters.Service_TableAdapter();
             this.tableAdapterManager = new park.parkDataSetTableAdapters.TableAdapterManager();
             this.service_BindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.service_BindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.id_serviceTextBox = new System.Windows.Forms.TextBox();
             this.idTextBox = new System.Windows.Forms.TextBox();
@@ -68,6 +68,51 @@
             ((System.ComponentModel.ISupportInitialize)(this.service_BindingNavigator)).BeginInit();
             this.service_BindingNavigator.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // id_serviceLabel
+            // 
+            id_serviceLabel.AutoSize = true;
+            id_serviceLabel.Location = new System.Drawing.Point(161, 101);
+            id_serviceLabel.Name = "id_serviceLabel";
+            id_serviceLabel.Size = new System.Drawing.Size(53, 16);
+            id_serviceLabel.TabIndex = 1;
+            id_serviceLabel.Text = "Номер:";
+            // 
+            // idLabel
+            // 
+            idLabel.AutoSize = true;
+            idLabel.Location = new System.Drawing.Point(113, 135);
+            idLabel.Name = "idLabel";
+            idLabel.Size = new System.Drawing.Size(98, 16);
+            idLabel.TabIndex = 3;
+            idLabel.Text = "Номер услуги";
+            // 
+            // name_serviceLabel
+            // 
+            name_serviceLabel.AutoSize = true;
+            name_serviceLabel.Location = new System.Drawing.Point(87, 181);
+            name_serviceLabel.Name = "name_serviceLabel";
+            name_serviceLabel.Size = new System.Drawing.Size(124, 16);
+            name_serviceLabel.TabIndex = 5;
+            name_serviceLabel.Text = "Название услуги:";
+            // 
+            // service_codeLabel
+            // 
+            service_codeLabel.AutoSize = true;
+            service_codeLabel.Location = new System.Drawing.Point(121, 223);
+            service_codeLabel.Name = "service_codeLabel";
+            service_codeLabel.Size = new System.Drawing.Size(82, 16);
+            service_codeLabel.TabIndex = 7;
+            service_codeLabel.Text = "Код услуги:";
+            // 
+            // costLabel
+            // 
+            costLabel.AutoSize = true;
+            costLabel.Location = new System.Drawing.Point(123, 261);
+            costLabel.Name = "costLabel";
+            costLabel.Size = new System.Drawing.Size(80, 16);
+            costLabel.TabIndex = 9;
+            costLabel.Text = "Стоимость:";
             // 
             // parkDataSet
             // 
@@ -125,9 +170,35 @@
             this.service_BindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.service_BindingNavigator.Name = "service_BindingNavigator";
             this.service_BindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.service_BindingNavigator.Size = new System.Drawing.Size(473, 31);
+            this.service_BindingNavigator.Size = new System.Drawing.Size(478, 27);
             this.service_BindingNavigator.TabIndex = 0;
             this.service_BindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorAddNewItem.Text = "Добавить";
+            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(55, 24);
+            this.bindingNavigatorCountItem.Text = "для {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorDeleteItem.Text = "Удалить";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -162,16 +233,9 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Текущее положение";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(55, 24);
-            this.bindingNavigatorCountItem.Text = "для {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorMoveNextItem
@@ -194,26 +258,8 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 28);
-            this.bindingNavigatorAddNewItem.Text = "Добавить";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
-            this.bindingNavigatorDeleteItem.Text = "Удалить";
             // 
             // service_BindingNavigatorSaveItem
             // 
@@ -222,108 +268,62 @@
             this.service_BindingNavigatorSaveItem.Name = "service_BindingNavigatorSaveItem";
             this.service_BindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 24);
             this.service_BindingNavigatorSaveItem.Text = "Сохранить данные";
-            this.service_BindingNavigatorSaveItem.Click += new System.EventHandler(this.service_BindingNavigatorSaveItem_Click);
-            // 
-            // id_serviceLabel
-            // 
-            id_serviceLabel.AutoSize = true;
-            id_serviceLabel.Location = new System.Drawing.Point(149, 112);
-            id_serviceLabel.Name = "id_serviceLabel";
-            id_serviceLabel.Size = new System.Drawing.Size(53, 16);
-            id_serviceLabel.TabIndex = 1;
-            id_serviceLabel.Text = "Номер:";
-            id_serviceLabel.Click += new System.EventHandler(this.id_serviceLabel_Click);
             // 
             // id_serviceTextBox
             // 
             this.id_serviceTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.service_BindingSource, "Id_service", true));
-            this.id_serviceTextBox.Location = new System.Drawing.Point(208, 109);
+            this.id_serviceTextBox.Location = new System.Drawing.Point(217, 98);
             this.id_serviceTextBox.Name = "id_serviceTextBox";
             this.id_serviceTextBox.Size = new System.Drawing.Size(100, 22);
             this.id_serviceTextBox.TabIndex = 2;
             // 
-            // idLabel
-            // 
-            idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(181, 148);
-            idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(101, 16);
-            idLabel.TabIndex = 3;
-            idLabel.Text = "Номер услуги:";
-            // 
             // idTextBox
             // 
             this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.service_BindingSource, "id", true));
-            this.idTextBox.Location = new System.Drawing.Point(208, 145);
+            this.idTextBox.Location = new System.Drawing.Point(217, 135);
             this.idTextBox.Name = "idTextBox";
             this.idTextBox.Size = new System.Drawing.Size(100, 22);
             this.idTextBox.TabIndex = 4;
             // 
-            // name_serviceLabel
-            // 
-            name_serviceLabel.AutoSize = true;
-            name_serviceLabel.Location = new System.Drawing.Point(108, 182);
-            name_serviceLabel.Name = "name_serviceLabel";
-            name_serviceLabel.Size = new System.Drawing.Size(94, 16);
-            name_serviceLabel.TabIndex = 5;
-            name_serviceLabel.Text = "Name service:";
-            // 
             // name_serviceTextBox
             // 
             this.name_serviceTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.service_BindingSource, "Name_service", true));
-            this.name_serviceTextBox.Location = new System.Drawing.Point(208, 179);
+            this.name_serviceTextBox.Location = new System.Drawing.Point(217, 175);
             this.name_serviceTextBox.Name = "name_serviceTextBox";
             this.name_serviceTextBox.Size = new System.Drawing.Size(100, 22);
             this.name_serviceTextBox.TabIndex = 6;
             // 
-            // service_codeLabel
-            // 
-            service_codeLabel.AutoSize = true;
-            service_codeLabel.Location = new System.Drawing.Point(112, 220);
-            service_codeLabel.Name = "service_codeLabel";
-            service_codeLabel.Size = new System.Drawing.Size(90, 16);
-            service_codeLabel.TabIndex = 7;
-            service_codeLabel.Text = "Service code:";
-            // 
             // service_codeTextBox
             // 
             this.service_codeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.service_BindingSource, "Service_code", true));
-            this.service_codeTextBox.Location = new System.Drawing.Point(208, 217);
+            this.service_codeTextBox.Location = new System.Drawing.Point(217, 220);
             this.service_codeTextBox.Name = "service_codeTextBox";
             this.service_codeTextBox.Size = new System.Drawing.Size(100, 22);
             this.service_codeTextBox.TabIndex = 8;
             // 
-            // costLabel
-            // 
-            costLabel.AutoSize = true;
-            costLabel.Location = new System.Drawing.Point(165, 259);
-            costLabel.Name = "costLabel";
-            costLabel.Size = new System.Drawing.Size(37, 16);
-            costLabel.TabIndex = 9;
-            costLabel.Text = "Cost:";
-            // 
             // costTextBox
             // 
             this.costTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.service_BindingSource, "Cost", true));
-            this.costTextBox.Location = new System.Drawing.Point(208, 256);
+            this.costTextBox.Location = new System.Drawing.Point(217, 258);
             this.costTextBox.Name = "costTextBox";
             this.costTextBox.Size = new System.Drawing.Size(100, 22);
             this.costTextBox.TabIndex = 10;
             // 
             // SaveButton
             // 
-            this.SaveButton.Location = new System.Drawing.Point(168, 310);
+            this.SaveButton.Location = new System.Drawing.Point(164, 329);
             this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(107, 23);
+            this.SaveButton.Size = new System.Drawing.Size(122, 23);
             this.SaveButton.TabIndex = 11;
             this.SaveButton.Text = "Сохранить";
             this.SaveButton.UseVisualStyleBackColor = true;
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
             // Service_Red
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(473, 450);
+            this.ClientSize = new System.Drawing.Size(478, 450);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(costLabel);
             this.Controls.Add(this.costTextBox);
@@ -337,7 +337,8 @@
             this.Controls.Add(this.id_serviceTextBox);
             this.Controls.Add(this.service_BindingNavigator);
             this.Name = "Service_Red";
-            this.Text = "Парк Горького - Услуги - Редактирование";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Парк Горького - Услуги - Добавление";
             this.Load += new System.EventHandler(this.Service_Red_Load);
             ((System.ComponentModel.ISupportInitialize)(this.parkDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.service_BindingSource)).EndInit();

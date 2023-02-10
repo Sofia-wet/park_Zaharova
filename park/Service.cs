@@ -26,7 +26,7 @@ namespace park
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            Service_Red s = new Service_Red();
+            Service_Add s = new Service_Add();
             s.Show();
             this.Close();
         }
