@@ -52,8 +52,6 @@ namespace park
                 SqlCommand sqlCommand = new SqlCommand($"select Code_client, Email, Password from Auth_client$ where Email='{@Login}' and Password='{Password}'", connection);
                 adapter.SelectCommand = sqlCommand;
                 adapter.Fill(table);
-                row = table.Select();
-                value = row[0][0].ToString();
                 value2 = 1;
             }
             else
@@ -61,8 +59,6 @@ namespace park
                 SqlCommand sqlCommand = new SqlCommand($"select Id_user, Login, Password from Auth_user$ where Login='{@Login}' and Password='{Password}'", connection);
                 adapter.SelectCommand = sqlCommand;
                 adapter.Fill(table);
-                row = table.Select();
-                value = row[0][0].ToString();
                 value2 = 0;
 
             }
@@ -70,6 +66,8 @@ namespace park
             if (table.Rows.Count == 1)
             {
                 MessageBox.Show("Пользователь успешно авторизован!", "Успешно!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                row = table.Select();
+                value = row[0][0].ToString();
                 Second s = new Second();
                 s.Show();
             }
