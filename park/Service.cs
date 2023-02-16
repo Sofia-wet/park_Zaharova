@@ -34,14 +34,7 @@ namespace park
         private void DelButton_Click(object sender, EventArgs e)
         {
             serviceBindingSource.RemoveCurrent();
-            this.tableAdapterManager1.UpdateAll(this.parkDataSet);
-        }
-
-        private void RedButton_Click(object sender, EventArgs e)
-        {
-            Service_Red s = new Service_Red();
-            s.Show();
-            this.Close();
+            this.service_TableAdapter.Update(this.parkDataSet._Service_);
         }
     }
 }
